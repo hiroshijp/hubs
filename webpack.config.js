@@ -330,6 +330,7 @@ module.exports = async (env, argv) => {
       verify: path.join(__dirname, "src", "verify.js"),
       tokens: path.join(__dirname, "src", "tokens.js"),
       "whats-new": path.join(__dirname, "src", "whats-new.js"),
+      "sample": path.join(__dirname, "src", "sample.js"),
       "webxr-polyfill": path.join(__dirname, "src", "webxr-polyfill.js")
     },
     output: {
@@ -678,6 +679,10 @@ module.exports = async (env, argv) => {
       }),
       htmlPagePlugin({
         filename: "whats-new.html",
+        inject: "head"
+      }),
+      htmlPagePlugin({
+        filename: "sample.html",
         inject: "head"
       }),
       htmlPagePlugin({
