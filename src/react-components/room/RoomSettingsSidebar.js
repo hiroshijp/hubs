@@ -149,6 +149,16 @@ export function RoomSettingsSidebar({
           />
         )}
         <InputField
+          label="hub logger"
+          fullWidth
+        >
+          <ToggleInput
+            label="hub logger"
+            description="allow hub logger"
+            {...register("allow_hub_logger")}
+          />
+        </InputField>
+        <InputField
           label={<FormattedMessage id="room-settings-sidebar.permissions" defaultMessage="Room Member Permissions" />}
           fullWidth
         >
