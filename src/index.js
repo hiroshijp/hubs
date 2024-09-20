@@ -30,16 +30,14 @@ const root = createRoot(container);
 root.render(<HomeRoot />);
 
 // post access info to hubs-observer
-var email = "anonymous";
-var from = window.location.href;
 const localStorageData = localStorage.getItem("___hubs_store");
-if (localStorageData) {
-    email = JSON.parse(localStorageData).credentials.email;
+var email = JSON.parse(localStorageData).credentials.email;
+if (email == "" || email == null) {
+  email = "anonymous";  
 } 
-
 const req = {
  visitor: { mail: email },
- visited_from: from,
+ visited_from: window.location.href,
 };
 
 fetch('https://hcce-observer-955595017457.us-central1.run.app/visited', {
