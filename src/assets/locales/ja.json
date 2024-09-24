@@ -692,5 +692,6 @@
   "webvr-unsupported-modal.message": "WebVRはこのブラウザではサポートされていません。OculusやSteamVRで入場する場合は、Firefoxを使用してください。",
   "webvr-unsupported-modal.title": "VRで入室",
   "webvr-unsupported-modal.webvr-rocks-link": "実験的なVRをサポートしているブラウザの一覧は <a>WebVR Rocks</a> を確認してください。",
-  "whats-new-page.title": "新着情報"
+  "whats-new-page.title": "新着情報",
+  "preferences-screen.preference.enable-third-person-view": "三人称視点を有効にする"
 }
