@@ -70,6 +70,7 @@ async function handleLinkClick(world: HubsWorld, button: EntityID) {
   switch (linkType) {
     case LinkType.LINK:
       await exitImmersive();
+      console.log("hiroshijp-log-for-debug: 1");
       window.open(src);
       break;
     case LinkType.AVATAR:

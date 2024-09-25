@@ -48,6 +48,7 @@ AFRAME.registerComponent("open-media-button", {
       let hubId;
       if (this.data.onlyOpenLink) {
         await exitImmersive();
+        console.log("hiroshijp-log-for-debug: 3");
         window.open(this.src);
       } else if (await isLocalHubsAvatarUrl(this.src)) {
         const avatarId = new URL(this.src).pathname.split("/").pop();
@@ -70,6 +71,7 @@ AFRAME.registerComponent("open-media-button", {
         }
       } else {
         await exitImmersive();
+        console.log("hiroshijp-log-for-debug: 4");
         window.open(this.src);
       }
     };

@@ -163,6 +163,7 @@ function openLink(world: HubsWorld, eid: EntityID) {
   //       but should support other type actions(eg: avatar update for avatar
   //       url, room switch for Hubs room url).
   //       See src/components/open-media-button.js
+  console.log("hiroshijp-log-for-debug: 2");
   window.open(src);
 }
 
