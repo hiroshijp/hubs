@@ -156,6 +156,13 @@ export default class MessageDispatch extends EventTarget {
           this.scene.systems["hubs-systems"].soundEffectsSystem.playSoundOneShot(SOUND_QUACK);
         }
         break;
+      case "hatena":
+        const avatarPov = document.querySelector("#avatar-pov-node").object3D;
+        const eid = createNetworkedEntity(APP.world, "hatena");
+        const obj = APP.world.eid2obj.get(eid);
+        obj.position.copy(avatarPov.localToWorld(new THREE.Vector3(0, 0, -1.5)));
+        obj.lookAt(avatarPov.getWorldPosition(new THREE.Vector3()));
+        break;
       case "cube": {
         const avatarPov = document.querySelector("#avatar-pov-node").object3D;
         const eid = createNetworkedEntity(APP.world, "cube");

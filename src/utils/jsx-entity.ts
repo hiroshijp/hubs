@@ -41,7 +41,8 @@ import {
   Inspectable,
   ObjectMenu,
   HoverableVisuals,
-  MirrorMenu
+  MirrorMenu,
+  HatenaMsg,
 } from "../bit-components";
 import { inflateMediaLoader } from "../inflators/media-loader";
 import { inflateMediaFrame } from "../inflators/media-frame";
@@ -306,6 +307,7 @@ export interface JSXComponentData extends ComponentData {
   makeKinematicOnRelease?: true;
   destroyAtExtremeDistance?: true;
   quack?: true;
+  hatenaMsg?: true;
 
   // @TODO Define all the anys
   textButton?: any;
@@ -498,7 +500,8 @@ const jsxInflators: Required<{ [K in keyof JSXComponentData]: InflatorFn }> = {
   link: inflateLink,
   objectMenuTransform: inflateObjectMenuTransform,
   objectMenuTarget: inflateObjectMenuTarget,
-  plane: inflatePlane
+  plane: inflatePlane,
+  hatenaMsg: createDefaultInflator(HatenaMsg)
 };
 
 export const gltfInflators: Required<{ [K in keyof GLTFComponentData]: InflatorFn }> = {

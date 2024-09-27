@@ -461,3 +461,4 @@ export const ObjectMenuTransform = defineComponent({
   prevObjectRef: Types.eid,
   flags: Types.ui8
 });
+export const HatenaMsg = defineComponent();
